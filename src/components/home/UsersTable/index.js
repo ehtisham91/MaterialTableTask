@@ -29,10 +29,10 @@ function UsersTable({
 
   const customField = (key) => {
     const value = selectedUser[key];
+
     return (
       <TextField
         required
-        // key={key}
         id={key}
         value={value}
         onChange={(event) =>
@@ -80,18 +80,12 @@ function UsersTable({
                   <TableCell size="small" component="th" scope="row">
                     {isSelected ? (
                       <Box>
-                        <IconButton
-                          // key={`check-btn-${index}`}
-                          onClick={updateUser}
-                        >
+                        <IconButton onClick={updateUser}>
                           <SvgIcon fontSize="small">
                             <CheckIcon />
                           </SvgIcon>
                         </IconButton>
-                        <IconButton
-                          // key={`cross-btn-${index}`}
-                          onClick={() => setSelectedUser({})}
-                        >
+                        <IconButton onClick={() => setSelectedUser({})}>
                           <SvgIcon fontSize="small">
                             <ClearIcon />
                           </SvgIcon>
@@ -99,10 +93,7 @@ function UsersTable({
                       </Box>
                     ) : (
                       <Box>
-                        <IconButton
-                          // key={`edit-btn-${index}`}
-                          onClick={() => setSelectedUser(user)}
-                        >
+                        <IconButton onClick={() => setSelectedUser(user)}>
                           <SvgIcon fontSize="small">
                             <EditIcon />
                           </SvgIcon>

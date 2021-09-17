@@ -13,7 +13,6 @@ for (let i = 1; i <= 40; i++) {
 }
 
 // pseudo API endpoints
-
 export const getUsersReq = () =>
   new Promise((resolve, reject) => {
     if (!users) {

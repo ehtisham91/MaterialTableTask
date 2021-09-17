@@ -5,9 +5,10 @@ import Skeleton from "@material-ui/lab/Skeleton";
 
 const SkeletonRows = ({ cellSize, rowsLength }) => {
   let rows = Array.from(Array(rowsLength).keys());
+
   return rows.map((_, i) => (
     <TableRow key={`row-${i}`}>
-      <TableCell key={`cell-${i}`} colSpan={cellSize}>
+      <TableCell colSpan={cellSize}>
         <Skeleton key={`skelton-${i}`} />
       </TableCell>
     </TableRow>
