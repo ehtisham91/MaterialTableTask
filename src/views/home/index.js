@@ -57,7 +57,7 @@ function Home() {
   return (
     <Container maxWidth="md">
       <Box mt={4} mb={2}>
-        <Typography variant="h6" component="h6">
+        <Typography className={classes.title} variant="h6" component="h6">
           Manage Users
         </Typography>
       </Box>

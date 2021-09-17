@@ -55,7 +55,9 @@ function UsersTable({
             {headings.map((heading, i) => (
               <TableCell
                 key={`heading-cell-${i}`}
-                className={classes.headerTitle}
+                classes={{
+                  head: classes.headerTitle,
+                }}
               >
                 {heading}
               </TableCell>
@@ -102,7 +104,7 @@ function UsersTable({
                     )}
                   </TableCell>
                   <TableCell size="small" align="left">
-                    {index}
+                    {index + 1}
                   </TableCell>
                   <TableCell size="small" align="left">
                     {isSelected ? customField("firstName") : user.firstName}

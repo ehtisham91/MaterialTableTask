@@ -4,7 +4,7 @@ export const useStyles = makeStyles({
   table: {
     minWidth: 650,
     "& .MuiTableCell-sizeSmall": {
-      padding: "0px 24px !important",
+      padding: "0px 16px !important",
     },
   },
   header: {
@@ -13,9 +13,13 @@ export const useStyles = makeStyles({
   headerTitle: {
     fontWeight: "600",
     color: "rgba(0, 0, 0, 0.5)",
+    lineHeight: "1rem",
   },
   disabled: {
     pointerEvents: "none",
     opacity: "0.6",
+  },
+  title: {
+    fontWeight: "600",
   },
 });

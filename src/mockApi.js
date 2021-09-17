@@ -6,8 +6,8 @@ for (let i = 1; i <= 40; i++) {
   let id = uuidv4();
   users.push({
     id,
-    firstName: `user-${i}`,
-    lastName: "Wieruch",
+    firstName: `John ${i}`,
+    lastName: "Doe",
     birthday: "31.12.1999",
   });
 }
