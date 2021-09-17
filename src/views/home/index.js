@@ -8,10 +8,11 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 import { useStyles } from "./styles";
-import UsersTable from "../../components/home/usersTable";
+import UsersTable from "../../components/home/UsersTable";
 
 function Home() {
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedUser, setSelectedUser] = useState();
 
   const { enqueueSnackbar } = useSnackbar();
@@ -25,6 +26,8 @@ function Home() {
       enqueueSnackbar("Something went wrong", {
         variant: "error",
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -54,7 +57,7 @@ function Home() {
   return (
     <Container maxWidth="md">
       <Box mt={4} mb={2}>
-        <Typography variant="h6" component="subtitle2">
+        <Typography variant="h6" component="h6">
           Manage Users
         </Typography>
       </Box>
@@ -62,10 +65,11 @@ function Home() {
         <UsersTable
           classes={classes}
           users={users}
-          getUsers={getUsers}
           updateUser={updateUser}
           selectedUser={selectedUser}
           setSelectedUser={setSelectedUser}
+          loading={loading}
+          key="users-table-component"
         />
       </Box>
     </Container>

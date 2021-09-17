@@ -4,7 +4,7 @@ import LoadingScreen from "../components/LoadingScreen";
 import routes from "./routesList";
 
 export const renderRoutes = () => (
-  <Suspense fallback={<LoadingScreen />}>
+  <Suspense fallback={<LoadingScreen key="loadingScreen" />}>
     <Switch>
       {routes.map((route, i) => {
         const Component = route.component;

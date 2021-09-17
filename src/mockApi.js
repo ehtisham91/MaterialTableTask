@@ -20,7 +20,7 @@ export const getUsersReq = () =>
       return setTimeout(() => reject(new Error("Users not found")), 250);
     }
 
-    setTimeout(() => resolve({ data: users }), 200);
+    setTimeout(() => resolve({ data: users }), 2000);
   });
 
 export const updateUserReq = (data) =>
@@ -36,5 +36,5 @@ export const updateUserReq = (data) =>
     if (!found) {
       return setTimeout(() => reject(new Error("User not found")), 250);
     }
-    return setTimeout(() => resolve({ data: users }), 204);
+    return setTimeout(() => resolve({ data: users }), 250);
   });
