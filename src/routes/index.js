@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
+
 import LoadingScreen from "../components/LoadingScreen";
 import routes from "./routesList";
 

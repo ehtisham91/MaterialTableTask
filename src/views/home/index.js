@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import { useSnackbar } from "notistack";
-
-import { getUsersReq, updateUserReq } from "../../mockApi";
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 import { useStyles } from "./styles";
+import { getUsersReq, updateUserReq } from "../../mockApi";
 import UsersTable from "../../components/home/UsersTable";
 
 function Home() {
