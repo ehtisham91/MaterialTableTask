@@ -11,9 +11,9 @@ export const useStyles = makeStyles({
     background: "#f9fafa",
   },
   headerTitle: {
-    fontWeight: "600",
-    color: "rgba(0, 0, 0, 0.5)",
-    lineHeight: "1rem",
+    fontWeight: "600 !important",
+    color: "rgba(0, 0, 0, 0.5) !important",
+    lineHeight: "1rem !important",
   },
   disabled: {
     pointerEvents: "none",
